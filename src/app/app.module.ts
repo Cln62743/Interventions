@@ -19,7 +19,6 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     AppRoutingModule,
     AngularFontAwesomeModule,
-    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
