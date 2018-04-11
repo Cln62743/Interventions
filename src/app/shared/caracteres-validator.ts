@@ -14,4 +14,14 @@ export class VerifierCharacteresValidator {
             return { 'chaine': result };  
         };
     }
+    static longueurMinimum(): ValidatorFn {
+        return (c: AbstractControl): { [key: string]: boolean } | null => {
+            let result = true;
+            if(c.value.trim().length <= 2){
+                result = false;
+            }
+
+            return { 'chaine': result };  
+        };
+    }
 }
