@@ -5,9 +5,9 @@ export class VerifierCharacteresValidator {
         return (c: AbstractControl): { [key: string]: boolean } | null => {
             let result = true;
 
-            if (c.value == null && c.value == ''){
+            if (c.value == null || c.value == ''){
                 result = false;
-            }else if(c.value.trim().length == 0){
+            }else if(c.value.trim().length <= 0){
                 result = false;
             }
 
@@ -17,7 +17,8 @@ export class VerifierCharacteresValidator {
     static longueurMinimum(): ValidatorFn {
         return (c: AbstractControl): { [key: string]: boolean } | null => {
             let result = true;
-            if(c.value.trim().length <= 2){
+            
+            if(c.value == null || c.value.trim().length <= 2){
                 result = false;
             }
 

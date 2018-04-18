@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+         import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProblemeComponent } from './probleme.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
@@ -21,7 +21,7 @@ describe('ProblemeComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
    /*it('should create', () => {
      expect(component).toBeTruthy();
    });*/
@@ -57,15 +57,15 @@ describe('ProblemeComponent', () => {
     expect(zone.valid).toBeFalsy();
   })
 
-  it('Zone prénom valide avec 50 espaces', () =>{
+  it('Zone prénom invalide avec 50 espaces', () =>{
     let zone = component.problemeForm.controls['prenomProbleme'];
     zone.setValue(' '.repeat(50));
-    expect(zone.valid).toBeTruthy();
+    expect(zone.valid).toBeFalsy();
   })
 
-  it('Zone prénom valide avec 2 espaces 1 caractère', () =>{
+  it('Zone prénom invalide avec 2 espaces 1 caractère', () =>{
     let zone = component.problemeForm.controls['prenomProbleme'];
     zone.setValue(' '.repeat(2) + 'a');
-    expect(zone.valid).toBeTruthy();
+    expect(zone.valid).toBeFalsy();
   })
 });
